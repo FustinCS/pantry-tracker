@@ -163,7 +163,7 @@ export default function Home() {
             Inventory Items
           </Typography>
         </Box>
-        <Stack width="800px" height="300px" spacing={2} overflow="auto" border="2px solid ">
+        <Stack width="800px" height="300px" spacing={2} overflow="auto" border="2px solid black">
           {inventory
             .filter((item) => item.name.includes(searchName.toLowerCase()))
             .map(({ name, quantity }) => (
