@@ -131,7 +131,7 @@ export default function Home() {
         gap={4}
       >
         <Button
-          style={{minWidth: '150px'}}
+          style={{minWidth: '150px', backgroundColor: "#97EFCB", color: "black"}}
           variant="contained"
           onClick={() => {
             handleOpen();
@@ -153,7 +153,7 @@ export default function Home() {
         <Box
           width="800px"
           height="100px"
-          bgcolor="#ADD8E6"
+          bgcolor="#97EFCB"
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -163,7 +163,7 @@ export default function Home() {
             Inventory Items
           </Typography>
         </Box>
-        <Stack width="800px" height="300px" spacing={2} overflow="auto">
+        <Stack width="800px" height="300px" spacing={2} overflow="auto" border="2px solid ">
           {inventory
             .filter((item) => item.name.includes(searchName.toLowerCase()))
             .map(({ name, quantity }) => (
@@ -184,6 +184,7 @@ export default function Home() {
                   {quantity}
                 </Typography>
                 <Button
+                  style={{backgroundColor: "#97EFCB", color: "black"}}
                   variant="contained"
                   onClick={() => {
                     removeItem(name);
