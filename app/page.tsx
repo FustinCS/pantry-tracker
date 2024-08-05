@@ -165,7 +165,7 @@ export default function Home() {
         </Box>
         <Stack width="800px" height="300px" spacing={2} overflow="auto" border="2px solid black">
           {inventory
-            .filter((item) => item.name.includes(searchName.toLowerCase()))
+            .filter((item) => item.name.toLowerCase().includes(searchName.toLowerCase()))
             .map(({ name, quantity }) => (
               <Box
                 key={name}
